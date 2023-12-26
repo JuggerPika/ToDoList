@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta.11/draggable.bundle.legacy.min.js"></script>
+    <title>To do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Todo List</h1>
+    </header>
+
+    <main class="main">
+        <div class="today">
+            <h2 class="today__title">Today</h2>
+            <p class="today__date">
+                December 4, 2023
+            </p>
+
+            <div class="all__btn" id="all__btn">
+                <div class="other__btn">
+                    <svg class="delete__btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H16C16.5523 12 17 11.5523 17 11C17 10.4477 16.5523 10 16 10H8Z" fill="#fff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V5C1 6.30622 1.83481 7.41746 3 7.82929V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V7.82929C22.1652 7.41746 23 6.30622 23 5V4ZM20 6H4C3.44772 6 3 5.55228 3 5V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V5C21 5.55228 20.5523 6 20 6ZM5 20V8H19V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20Z" fill="#fff"></path> </g></svg>
+
+                    <svg class="delete__btn_second" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 10C7.44772 10 7 10.4477 7 11C7 11.5523 7.44772 12 8 12H16C16.5523 12 17 11.5523 17 11C17 10.4477 16.5523 10 16 10H8Z" fill="#FF7F7F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M23 4C23 2.34315 21.6569 1 20 1H4C2.34315 1 1 2.34315 1 4V5C1 6.30622 1.83481 7.41746 3 7.82929V20C3 21.6569 4.34315 23 6 23H18C19.6569 23 21 21.6569 21 20V7.82929C22.1652 7.41746 23 6.30622 23 5V4ZM20 6H4C3.44772 6 3 5.55228 3 5V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V5C21 5.55228 20.5523 6 20 6ZM5 20V8H19V20C19 20.5523 18.5523 21 18 21H6C5.44772 21 5 20.5523 5 20Z" fill="#FF7F7F"></path> </g></svg>
+
+                    <svg class="priority__btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1C4.44772 1 4 1.44772 4 2V22C4 22.5523 4.44772 23 5 23C5.55228 23 6 22.5523 6 22V14H19C19.3603 14 19.6927 13.8062 19.8702 13.4927C20.0477 13.1792 20.0429 12.7944 19.8575 12.4855L17.1662 8L19.8575 3.5145C20.0429 3.20556 20.0477 2.82081 19.8702 2.5073C19.6927 2.19379 19.3603 2 19 2L6 2C6 1.44772 5.55228 1 5 1ZM6 4V12H17.2338L15.1425 8.5145C14.9525 8.19781 14.9525 7.80219 15.1425 7.4855L17.2338 4H6Z" fill="#fff"></path> </g></svg>
+                    
+                    <svg class="priority__btn_second" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1C4.44772 1 4 1.44772 4 2V22C4 22.5523 4.44772 23 5 23C5.55228 23 6 22.5523 6 22V14H19C19.3603 14 19.6927 13.8062 19.8702 13.4927C20.0477 13.1792 20.0429 12.7944 19.8575 12.4855L17.1662 8L19.8575 3.5145C20.0429 3.20556 20.0477 2.82081 19.8702 2.5073C19.6927 2.19379 19.3603 2 19 2L6 2C6 1.44772 5.55228 1 5 1ZM6 4V12H17.2338L15.1425 8.5145C14.9525 8.19781 14.9525 7.80219 15.1425 7.4855L17.2338 4H6Z" fill="#fff"></path> </g></svg>
+
+                </div>
+
+                <svg id="add_btn" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <path d="M30 21.6633H21.6667V29.9967C21.6667 30.4387 21.4911 30.8626 21.1785 31.1752C20.8659 31.4877 20.442 31.6633 20 31.6633C19.558 31.6633 19.134 31.4877 18.8215 31.1752C18.5089 30.8626 18.3333 30.4387 18.3333 29.9967V21.6633H9.99999C9.55797 21.6633 9.13404 21.4877 8.82148 21.1752C8.50892 20.8626 8.33333 20.4387 8.33333 19.9967C8.33333 19.5546 8.50892 19.1307 8.82148 18.8181C9.13404 18.5056 9.55797 18.33 9.99999 18.33H18.3333V9.99665C18.3333 9.55463 18.5089 9.1307 18.8215 8.81814C19.134 8.50558 19.558 8.32999 20 8.32999C20.442 8.32999 20.8659 8.50558 21.1785 8.81814C21.4911 9.1307 21.6667 9.55463 21.6667 9.99665V18.33H30C30.442 18.33 30.8659 18.5056 31.1785 18.8181C31.4911 19.1307 31.6667 19.5546 31.6667 19.9967C31.6667 20.4387 31.4911 20.8626 31.1785 21.1752C30.8659 21.4877 30.442 21.6633 30 21.6633Z" fill="black"/>
+                </svg>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

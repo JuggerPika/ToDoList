@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+:root {
+    /* color */
+    --bg-color: #151515;
+    --bg-list-item: #201f1fd2;
+    --white: #FFF;
+    --black: #000;
+    --dark-grey: #7A7777;
+    --light-grey: #F5F5F5;
+    --accent-color: #0AB6AB;
+    
+    /* text */
+    --standart-font: 1.125rem;
+    --normaal-font: 1rem;
+    --small-font: .75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+}
+
+body {
+    user-select: none;
+    -webkit-user-select: none; 
+}
+
+/* header */
+.header {
+    background-color: #0AB6AB;
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title {
+    color: #000;
+    font-family: Raleway;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* main content */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* today */
+.today {
+    width: 24rem;
+    height: auto;
+
+    background-color: var(--bg-color);
+    border-radius: 1.875rem;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.40);
+}
+
+.today__title {
+    color: var(--white);
+    font-size: var(--standart-font);
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: .4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.today__date {
+    color: var(--dark-grey);
+    font-size: var(--small-font);
+    font-weight: 400;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.today__list__item {
+    background-color: var(--bg-list-item);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    border-radius: 0.5rem;
+
+    min-height: 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hiden {
+    display: none;
+}
+
+.today__box {
+    display: flex;
+    gap: .4rem;
+}
+
+.today__task__name {
+    color: var(--light-grey);
+    font-size: var(--normaal-font);
+    width: 14rem;
+    font-weight: 400;
+    background: none;
+    border: none;
+    outline:none;
+}
+
+.today__list__date{
+    display: flex;
+    gap: .4rem;   
+    color: var(--light-grey);
+    text-align: center;
+    font-size: var(--small-font);
+    font-weight: 400;
+}
+
+.active{
+    color: var(--dark-grey);
+}
+
+.comp_btn{
+    cursor: pointer;
+}
+
+.comp_btn_noactive {
+    display: none;
+}
+
+/* menu btn */
+
+.all__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+    margin-left: 1em;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.other__btn {
+    display: flex;
+    gap: .4rem;
+}
+
+.delete__btn {
+    width: 2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.delete__btn_second{
+    width: 2rem;
+    height: 1.2rem;
+    display: none;
+    justify-content: center;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.delete__btn_active {
+    scale: 1.2;
+}
+
+.deleteBtn_noactive{
+    display: none;
+}
+
+.deleteBtn{
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.priority__btn {
+    width: 2rem;
+    height: 1.2rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+.priority__btn_second{
+    width: 2rem;
+    height: 1.2rem;
+    display: none;
+    justify-content: center;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.priortityBtn_fixed {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    background-color: red;
+}
+
+.priortityBtn {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.priortityBtn_noactive {
+    display: none;
+}
+
+.priortityBtn_noactive_second {
+    display: none;
+}
+
+
+/* add btn */
+#add_btn {
+    background-color: var(--accent-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
